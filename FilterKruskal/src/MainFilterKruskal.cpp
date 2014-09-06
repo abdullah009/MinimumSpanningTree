@@ -91,16 +91,6 @@ int main(int argc, char **argv)
 	clock_t totalT	= clock() - startT;
 	// end -- filterKruskal algorithm
 
-	ofstream fileOutT("OutFK.txt");
-	double sum	= 0.0;
-	for (uint i = 0; i < verTotal - 1; ++i)
-	{
-		uint pos	= verTotal - 2 - i;
-		sum	+= treeEdgeArr[pos].weight;
-		fileOutT << treeEdgeArr[pos].verU << " " << treeEdgeArr[pos].verV << " " << treeEdgeArr[pos].weight << endl;
-	}
-	fileOutT.close();
-
 	free(edgeArr);
 	free(treeEdgeArr);
 	free(parentArr);
